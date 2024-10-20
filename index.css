@@ -1,0 +1,142 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+	display: inline-grid;
+	grid-template: "MainStatus MainStatus MainStatus" 7% 
+                   "Avatar Image Weather" 8% 
+                   "Avatar Image Supplies" 8% 
+                   "Avatar Image Supplies" 20% 
+                   "People Image Supplies" 15% 
+                   "People Chat Supplies" 10% 
+                   "People Chat Map" 20% 
+                   "People Options Map" 1fr / 20% 1fr 20%;
+    background-color: #1f1912;
+}
+
+.element {
+    background-color: #48351b;
+    color: white;
+}
+
+img {
+    border-radius: 5px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+div {
+    margin: 3px;
+    border-radius: 5px;
+}
+
+#MainStatus {
+    grid-area: MainStatus;
+    display: flex;
+}
+
+#MainStatus > p {
+    padding: 10px;
+    margin: auto;
+}
+
+#Weather {
+    grid-area: Weather;
+    display: flex;
+}
+
+#Weather > p {
+    margin: auto;
+}
+
+#Avatar {
+    grid-area: Avatar;
+}
+
+#Avatar > img {
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#Image {
+    grid-area: Image;
+}
+
+#Supplies {
+    grid-area: Supplies;
+}
+
+#People {
+    grid-area: People;
+    background: #be997588;
+}
+
+#Chat {
+    grid-area: Chat;
+    overflow: scroll;
+    padding: 0px 0px 0px 100px;
+}
+
+#Chat > p {
+    margin: 10px 10px 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #1f1912;
+    width: fit-content;
+}
+
+/*This will colour the user text only, rest of style inherited from the normal box above*/
+#Chat > p.user_text {
+    background-color: #745736;
+}
+
+#Map {
+    grid-area: Map;
+}
+
+#Options {
+    grid-area: Options;
+    background: salmon;
+}
+
+.button-chat {
+    color: white;
+    background-color: #b87e64;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.button-chat:hover {
+    background-color: #151520;
+    color: rgba(218, 125, 125, 0.61);
+}
+
+#weather_image {
+    width: 100%; /* Set the width to create a square */
+    height: 100%; /* Set the height to match the width */
+    object-fit: contain; /* Maintain aspect ratio and fit inside the container */
+}
+
+#Chat {
+    font-family: 'Papyrus', cursive; /* Set the font-family to a pirate style font */
+    color: #fafafa; /* Set the text color to a pirate style color */
+    
+}
+
+
+#MainStatus > p,
+#Weather > p,
+#Chat > p,
+#Options {
+    overflow: hidden; /* Hide any overflowing text */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
+}

@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>Untitled Game</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div id="MainStatus" class="element">
+	    <p>Food: <span id="food"></span></p>
+        <p>Speed: <span id="speed"></span></p>
+        <p>Money: <span id="money"></span></p>
+        <p>Health: <span id="health"></span></p>
+        <p>First Aid: <span id="firstaid"></span></p>
+        
+    </div>
+
+    <!-- Weather  -->
+    <div id="Weather" class="element">
+        <img id="weather_image" src="images/weather1.png">
+    </div>
+
+    <div id="Avatar" class="element">
+        <img id="avatar_image" src="images/profile1.png">
+        <ul>    
+            <li>Name: <span id="name"></span></li>
+            <li>Age: <span id="age"></span></li>
+            <li>Skills: <span id="skills"></span></li>
+        </ul>
+    </div>
+    <div id="Image" class="element">
+        <img id="main_image" src="images/main.png">
+    </div>
+    <div id="Chat" class="element"> 
+        <p class = "add_computer_message">hello, my name is Pop. What is your name, stranger?</p>
+    
+    </div>
+    
+    <!--   
+    <div id="Options" class="element">   
+        <p>I'll format these nicely later, pinky swear</p>
+	    <button>Thing1</button>
+	    <button>Thing2</button>
+	    <button>Thing3</button>
+	    <button>Thing4</button>      
+    </div>
+    -->
+
+    <div id="chatinput" class="element">
+        <!-- Existing chat messages go here -->
+        <input type="text" id="user_input" placeholder="Type your message here">
+        <button onclick="submitUserInput()">Submit</button>
+    </div>
+
+    <script>
+        // Clear the input editor when the page is opened
+        document.getElementById("user_input").value = "";
+    </script>
+   
+
+    <div id="People" class="element">info</div>
+    <div id="Supplies" class="element">
+	    <ul>
+		    <ol>Current day: <span id="day_id">game_state.day_id</span></ol>
+	    </ul>
+    </div>
+    <div id="Map" class="element">
+        <img id="map_image" src="images/map.png">
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
